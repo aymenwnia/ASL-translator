@@ -1,0 +1,55 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== Virtual environments =====
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# ===== IDE / editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== Project data =====
+# Raw Kaggle dataset and preprocessed numpy arrays.
+# Re-download / regenerate locally; see README.
+data/raw/
+data/processed/
+data/train_landmark_files/
+data/train.csv
+
+# ===== Logs =====
+logs/
+*.log
+nohup.out
+
+# ===== Experiment artifacts =====
+# Keep only the best / released model in models/.
+# Comment these out if you intend to track checkpoints.
+models/*.ckpt
+models/*_epoch*.pth
+models/*_last.pth
+runs/
+wandb/
+mlruns/
+
+# ===== OS junk =====
+desktop.ini

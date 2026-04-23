@@ -1,0 +1,188 @@
+04:15:45 | Training log: /users/eleves-a/2023/aymen.hammami/Documents/sign_lang_trans/logs/training.log
+04:15:45 | PyTorch version: 2.8.0+cu128
+04:15:45 | CUDA available: True
+04:15:45 | CUDA device: NVIDIA RTX A4000
+04:15:45 | Using device: cuda
+04:15:45 | 
+04:15:45 | ==================================================
+04:15:45 |   STEP 1: Loading data
+04:15:45 | ==================================================
+04:15:45 |   Loaded hello.csv: 400 samples
+04:15:45 |   Loaded no.csv: 400 samples
+04:15:45 |   Loaded stop.csv: 400 samples
+04:15:45 |   Loaded thanks.csv: 400 samples
+04:15:45 |   Loaded yes.csv: 400 samples
+04:15:45 | 
+04:15:45 | Total samples: 2000
+04:15:45 | Signs found: ['hello', 'no', 'stop', 'thanks', 'yes']
+04:15:45 |   hello: 400 samples
+04:15:45 |   no: 400 samples
+04:15:45 |   stop: 400 samples
+04:15:45 |   thanks: 400 samples
+04:15:45 |   yes: 400 samples
+04:15:45 | 
+04:15:45 | ==================================================
+04:15:45 |   STEP 2: Preparing features
+04:15:45 | ==================================================
+04:15:45 | Feature shape: (2000, 63) (samples x landmarks)
+04:15:45 | Classes (5): ['hello', 'no', 'stop', 'thanks', 'yes']
+04:15:45 | Train: 1400 | Val: 300 | Test: 300
+04:15:46 | 
+04:15:46 | ==================================================
+04:15:46 |   STEP 3: Building model
+04:15:46 | ==================================================
+04:15:46 | Model architecture:
+04:15:46 | SignMLP(
+  (net): Sequential(
+    (0): Linear(in_features=63, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+    (3): Linear(in_features=128, out_features=64, bias=True)
+    (4): ReLU()
+    (5): Dropout(p=0.3, inplace=False)
+    (6): Linear(in_features=64, out_features=5, bias=True)
+  )
+)
+04:15:46 | Total parameters: 16773
+04:15:46 | 
+04:15:46 | ==================================================
+04:15:46 |   STEP 4: Training (100 epochs)
+04:15:46 | ==================================================
+04:15:49 | Epoch   1/100 | Train Loss: 1.5508 | Train Acc: 31.6% | Val Loss: 1.4490 | Val Acc: 40.0% | 0.66s
+04:15:49 | Epoch   2/100 | Train Loss: 1.3161 | Train Acc: 44.1% | Val Loss: 1.1269 | Val Acc: 59.0% | 0.03s
+04:15:49 | Epoch   3/100 | Train Loss: 1.0590 | Train Acc: 60.1% | Val Loss: 0.9242 | Val Acc: 66.7% | 0.03s
+04:15:49 | Epoch   4/100 | Train Loss: 0.9232 | Train Acc: 64.4% | Val Loss: 0.7953 | Val Acc: 76.3% | 0.03s
+04:15:49 | Epoch   5/100 | Train Loss: 0.7892 | Train Acc: 72.0% | Val Loss: 0.6695 | Val Acc: 81.0% | 0.02s
+04:15:49 | Epoch   6/100 | Train Loss: 0.6600 | Train Acc: 79.1% | Val Loss: 0.5490 | Val Acc: 86.0% | 0.02s
+04:15:49 | Epoch   7/100 | Train Loss: 0.5621 | Train Acc: 84.2% | Val Loss: 0.4515 | Val Acc: 88.0% | 0.02s
+04:15:49 | Epoch   8/100 | Train Loss: 0.4671 | Train Acc: 87.2% | Val Loss: 0.3727 | Val Acc: 93.3% | 0.02s
+04:15:49 | Epoch   9/100 | Train Loss: 0.3946 | Train Acc: 89.4% | Val Loss: 0.3162 | Val Acc: 93.0% | 0.02s
+04:15:49 | Epoch  10/100 | Train Loss: 0.3282 | Train Acc: 92.0% | Val Loss: 0.2431 | Val Acc: 95.0% | 0.02s
+04:15:49 | Epoch  11/100 | Train Loss: 0.2860 | Train Acc: 93.4% | Val Loss: 0.2010 | Val Acc: 96.7% | 0.02s
+04:15:49 | Epoch  12/100 | Train Loss: 0.2420 | Train Acc: 94.9% | Val Loss: 0.1682 | Val Acc: 97.3% | 0.02s
+04:15:49 | Epoch  13/100 | Train Loss: 0.2049 | Train Acc: 95.6% | Val Loss: 0.1442 | Val Acc: 97.3% | 0.02s
+04:15:49 | Epoch  14/100 | Train Loss: 0.1771 | Train Acc: 96.1% | Val Loss: 0.1217 | Val Acc: 98.0% | 0.02s
+04:15:49 | Epoch  15/100 | Train Loss: 0.1624 | Train Acc: 96.0% | Val Loss: 0.1197 | Val Acc: 98.0% | 0.02s
+04:15:49 | Epoch  16/100 | Train Loss: 0.1434 | Train Acc: 97.1% | Val Loss: 0.1043 | Val Acc: 98.0% | 0.02s
+04:15:49 | Epoch  17/100 | Train Loss: 0.1422 | Train Acc: 97.5% | Val Loss: 0.0928 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  18/100 | Train Loss: 0.1223 | Train Acc: 98.1% | Val Loss: 0.0827 | Val Acc: 98.0% | 0.02s
+04:15:49 | Epoch  19/100 | Train Loss: 0.1172 | Train Acc: 97.6% | Val Loss: 0.0763 | Val Acc: 98.3% | 0.02s
+04:15:49 | Epoch  20/100 | Train Loss: 0.1183 | Train Acc: 97.6% | Val Loss: 0.0731 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  21/100 | Train Loss: 0.0977 | Train Acc: 98.0% | Val Loss: 0.0659 | Val Acc: 99.0% | 0.02s
+04:15:49 | Epoch  22/100 | Train Loss: 0.0796 | Train Acc: 98.8% | Val Loss: 0.0697 | Val Acc: 99.0% | 0.02s
+04:15:49 | Epoch  23/100 | Train Loss: 0.0907 | Train Acc: 98.4% | Val Loss: 0.0555 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  24/100 | Train Loss: 0.0967 | Train Acc: 97.9% | Val Loss: 0.0576 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  25/100 | Train Loss: 0.0798 | Train Acc: 98.4% | Val Loss: 0.0511 | Val Acc: 98.7% | 0.03s
+04:15:49 | Epoch  26/100 | Train Loss: 0.0770 | Train Acc: 98.4% | Val Loss: 0.0540 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  27/100 | Train Loss: 0.0719 | Train Acc: 98.6% | Val Loss: 0.0539 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  28/100 | Train Loss: 0.0731 | Train Acc: 98.7% | Val Loss: 0.0474 | Val Acc: 99.0% | 0.02s
+04:15:49 | Epoch  29/100 | Train Loss: 0.0640 | Train Acc: 98.4% | Val Loss: 0.0553 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  30/100 | Train Loss: 0.0609 | Train Acc: 98.9% | Val Loss: 0.0454 | Val Acc: 99.0% | 0.02s
+04:15:49 | Epoch  31/100 | Train Loss: 0.0671 | Train Acc: 98.8% | Val Loss: 0.0470 | Val Acc: 99.0% | 0.03s
+04:15:49 | Epoch  32/100 | Train Loss: 0.0547 | Train Acc: 98.7% | Val Loss: 0.0418 | Val Acc: 98.7% | 0.02s
+04:15:49 | Epoch  33/100 | Train Loss: 0.0603 | Train Acc: 98.6% | Val Loss: 0.0391 | Val Acc: 99.0% | 0.02s
+04:15:49 | Epoch  34/100 | Train Loss: 0.0538 | Train Acc: 99.0% | Val Loss: 0.0395 | Val Acc: 99.0% | 0.02s
+04:15:50 | Epoch  35/100 | Train Loss: 0.0425 | Train Acc: 98.9% | Val Loss: 0.0436 | Val Acc: 99.0% | 0.02s
+04:15:50 | Epoch  36/100 | Train Loss: 0.0558 | Train Acc: 98.6% | Val Loss: 0.0429 | Val Acc: 99.0% | 0.02s
+04:15:50 | Epoch  37/100 | Train Loss: 0.0540 | Train Acc: 98.7% | Val Loss: 0.0406 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  38/100 | Train Loss: 0.0443 | Train Acc: 99.0% | Val Loss: 0.0405 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  39/100 | Train Loss: 0.0662 | Train Acc: 98.1% | Val Loss: 0.0468 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  40/100 | Train Loss: 0.0428 | Train Acc: 99.1% | Val Loss: 0.0377 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  41/100 | Train Loss: 0.0486 | Train Acc: 98.5% | Val Loss: 0.0398 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  42/100 | Train Loss: 0.0470 | Train Acc: 98.9% | Val Loss: 0.0346 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  43/100 | Train Loss: 0.0523 | Train Acc: 98.6% | Val Loss: 0.0355 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  44/100 | Train Loss: 0.0471 | Train Acc: 99.0% | Val Loss: 0.0330 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  45/100 | Train Loss: 0.0389 | Train Acc: 99.3% | Val Loss: 0.0406 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  46/100 | Train Loss: 0.0456 | Train Acc: 98.9% | Val Loss: 0.0508 | Val Acc: 98.0% | 0.03s
+04:15:50 | Epoch  47/100 | Train Loss: 0.0418 | Train Acc: 99.1% | Val Loss: 0.0396 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  48/100 | Train Loss: 0.0405 | Train Acc: 98.9% | Val Loss: 0.0449 | Val Acc: 98.3% | 0.03s
+04:15:50 | Epoch  49/100 | Train Loss: 0.0427 | Train Acc: 98.8% | Val Loss: 0.0289 | Val Acc: 99.3% | 0.03s
+04:15:50 | Epoch  50/100 | Train Loss: 0.0447 | Train Acc: 98.6% | Val Loss: 0.0270 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  51/100 | Train Loss: 0.0385 | Train Acc: 99.0% | Val Loss: 0.0277 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  52/100 | Train Loss: 0.0349 | Train Acc: 99.0% | Val Loss: 0.0347 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  53/100 | Train Loss: 0.0376 | Train Acc: 99.4% | Val Loss: 0.0301 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  54/100 | Train Loss: 0.0316 | Train Acc: 99.1% | Val Loss: 0.0270 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  55/100 | Train Loss: 0.0413 | Train Acc: 98.9% | Val Loss: 0.0270 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  56/100 | Train Loss: 0.0390 | Train Acc: 99.1% | Val Loss: 0.0261 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  57/100 | Train Loss: 0.0318 | Train Acc: 99.4% | Val Loss: 0.0242 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  58/100 | Train Loss: 0.0263 | Train Acc: 99.3% | Val Loss: 0.0229 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  59/100 | Train Loss: 0.0251 | Train Acc: 99.3% | Val Loss: 0.0251 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  60/100 | Train Loss: 0.0454 | Train Acc: 98.8% | Val Loss: 0.0267 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  61/100 | Train Loss: 0.0444 | Train Acc: 99.1% | Val Loss: 0.0341 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  62/100 | Train Loss: 0.0307 | Train Acc: 99.2% | Val Loss: 0.0196 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  63/100 | Train Loss: 0.0216 | Train Acc: 99.5% | Val Loss: 0.0187 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  64/100 | Train Loss: 0.0156 | Train Acc: 99.7% | Val Loss: 0.0187 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  65/100 | Train Loss: 0.0296 | Train Acc: 99.1% | Val Loss: 0.0141 | Val Acc: 99.3% | 0.03s
+04:15:50 | Epoch  66/100 | Train Loss: 0.0282 | Train Acc: 99.4% | Val Loss: 0.0234 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  67/100 | Train Loss: 0.0276 | Train Acc: 99.4% | Val Loss: 0.0130 | Val Acc: 99.3% | 0.03s
+04:15:50 | Epoch  68/100 | Train Loss: 0.0228 | Train Acc: 99.4% | Val Loss: 0.0163 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  69/100 | Train Loss: 0.0380 | Train Acc: 98.9% | Val Loss: 0.0160 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  70/100 | Train Loss: 0.0218 | Train Acc: 99.4% | Val Loss: 0.0177 | Val Acc: 99.0% | 0.03s
+04:15:50 | Epoch  71/100 | Train Loss: 0.0291 | Train Acc: 98.9% | Val Loss: 0.0259 | Val Acc: 98.7% | 0.03s
+04:15:50 | Epoch  72/100 | Train Loss: 0.0286 | Train Acc: 98.9% | Val Loss: 0.0184 | Val Acc: 99.0% | 0.03s
+04:15:51 | Epoch  73/100 | Train Loss: 0.0210 | Train Acc: 99.4% | Val Loss: 0.0132 | Val Acc: 99.3% | 0.03s
+04:15:51 | Epoch  74/100 | Train Loss: 0.0169 | Train Acc: 99.6% | Val Loss: 0.0133 | Val Acc: 99.0% | 0.03s
+04:15:51 | Epoch  75/100 | Train Loss: 0.0248 | Train Acc: 99.3% | Val Loss: 0.0103 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  76/100 | Train Loss: 0.0232 | Train Acc: 99.4% | Val Loss: 0.0129 | Val Acc: 99.3% | 0.03s
+04:15:51 | Epoch  77/100 | Train Loss: 0.0180 | Train Acc: 99.4% | Val Loss: 0.0143 | Val Acc: 99.0% | 0.03s
+04:15:51 | Epoch  78/100 | Train Loss: 0.0215 | Train Acc: 99.3% | Val Loss: 0.0160 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  79/100 | Train Loss: 0.0172 | Train Acc: 99.6% | Val Loss: 0.0147 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  80/100 | Train Loss: 0.0229 | Train Acc: 99.4% | Val Loss: 0.0135 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  81/100 | Train Loss: 0.0184 | Train Acc: 99.6% | Val Loss: 0.0146 | Val Acc: 99.0% | 0.03s
+04:15:51 | Epoch  82/100 | Train Loss: 0.0339 | Train Acc: 99.1% | Val Loss: 0.0230 | Val Acc: 99.3% | 0.03s
+04:15:51 | Epoch  83/100 | Train Loss: 0.0237 | Train Acc: 99.4% | Val Loss: 0.0092 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  84/100 | Train Loss: 0.0214 | Train Acc: 99.4% | Val Loss: 0.0093 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  85/100 | Train Loss: 0.0230 | Train Acc: 99.1% | Val Loss: 0.0142 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  86/100 | Train Loss: 0.0217 | Train Acc: 99.5% | Val Loss: 0.0149 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  87/100 | Train Loss: 0.0188 | Train Acc: 99.5% | Val Loss: 0.0068 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  88/100 | Train Loss: 0.0175 | Train Acc: 99.4% | Val Loss: 0.0117 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  89/100 | Train Loss: 0.0141 | Train Acc: 99.8% | Val Loss: 0.0091 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  90/100 | Train Loss: 0.0161 | Train Acc: 99.5% | Val Loss: 0.0069 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  91/100 | Train Loss: 0.0105 | Train Acc: 99.7% | Val Loss: 0.0079 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  92/100 | Train Loss: 0.0134 | Train Acc: 99.6% | Val Loss: 0.0054 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  93/100 | Train Loss: 0.0175 | Train Acc: 99.4% | Val Loss: 0.0079 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  94/100 | Train Loss: 0.0197 | Train Acc: 99.3% | Val Loss: 0.0090 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch  95/100 | Train Loss: 0.0126 | Train Acc: 99.6% | Val Loss: 0.0047 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  96/100 | Train Loss: 0.0119 | Train Acc: 99.7% | Val Loss: 0.0082 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  97/100 | Train Loss: 0.0256 | Train Acc: 99.4% | Val Loss: 0.0066 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  98/100 | Train Loss: 0.0233 | Train Acc: 99.5% | Val Loss: 0.0061 | Val Acc: 100.0% | 0.03s
+04:15:51 | Epoch  99/100 | Train Loss: 0.0184 | Train Acc: 99.4% | Val Loss: 0.0119 | Val Acc: 99.7% | 0.03s
+04:15:51 | Epoch 100/100 | Train Loss: 0.0079 | Train Acc: 99.9% | Val Loss: 0.0084 | Val Acc: 99.7% | 0.03s
+04:15:51 | 
+04:15:51 | Training complete in 3.2s
+04:15:51 | Best validation accuracy: 100.0% (epoch 75)
+04:15:51 | 
+04:15:51 | ==================================================
+04:15:51 |   STEP 5: Test evaluation
+04:15:51 | ==================================================
+04:15:51 | 
+04:15:51 | Test accuracy: 99.7%
+04:15:51 | 
+04:15:51 | Classification Report:
+04:15:51 |               precision    recall  f1-score   support
+04:15:51 | 
+04:15:51 |        hello       1.00      1.00      1.00        60
+04:15:51 |           no       1.00      1.00      1.00        60
+04:15:51 |         stop       1.00      0.98      0.99        60
+04:15:51 |       thanks       0.98      1.00      0.99        60
+04:15:51 |          yes       1.00      1.00      1.00        60
+04:15:51 | 
+04:15:51 |     accuracy                           1.00       300
+04:15:51 |    macro avg       1.00      1.00      1.00       300
+04:15:51 | weighted avg       1.00      1.00      1.00       300
+04:15:51 | 
+04:15:51 | 
+04:15:51 | ==================================================
+04:15:51 |   STEP 6: Saving artifacts
+04:15:51 | ==================================================
+04:15:51 |   Saved label_map.json
+04:15:51 |   Saved confusion_matrix.png
+04:15:51 |   Saved training_curves.png
+04:15:51 | 
+04:15:51 | ==================================================
+04:15:51 |   DONE!
+04:15:51 |   Model: models/sign_mlp_best.pth
+04:15:51 |   Labels: models/label_map.json
+04:15:51 |   Plots: models/confusion_matrix.png, training_curves.png
+04:15:51 |   Next: python src/live_demo.py
+04:15:51 | ==================================================

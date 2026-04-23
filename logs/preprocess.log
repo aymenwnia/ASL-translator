@@ -1,0 +1,41 @@
+13:49:54 | Loading metadata...
+13:49:54 | Total sequences: 94477
+13:49:54 | Unique signs: 250
+13:49:54 | Unique participants: 21
+13:49:54 | Sign classes: 250
+13:49:54 | Features per frame: 390 (42 hand + 76 face + 12 pose landmarks x 3 coords)
+13:49:54 | Sequence length: 64 frames
+13:49:54 | Selected landmarks: 130 -> 390 features per frame
+13:49:54 | 
+13:49:54 | Processing parquet files...
+13:53:27 |   5000/94477 processed | 23/s | ETA: 3816s | skipped: 0 | errors: 0
+13:58:12 |   10000/94477 processed | 20/s | ETA: 4206s | skipped: 0 | errors: 0
+14:04:11 |   15000/94477 processed | 18/s | ETA: 4541s | skipped: 0 | errors: 0
+14:13:26 |   20000/94477 processed | 14/s | ETA: 5260s | skipped: 0 | errors: 0
+14:37:31 |   25000/94477 processed | 9/s | ETA: 7939s | skipped: 0 | errors: 0
+14:51:11 |   30000/94477 processed | 8/s | ETA: 7903s | skipped: 0 | errors: 0
+15:10:26 |   35000/94477 processed | 7/s | ETA: 8210s | skipped: 0 | errors: 0
+15:22:09 |   40000/94477 processed | 7/s | ETA: 7538s | skipped: 0 | errors: 0
+15:30:34 |   45000/94477 processed | 7/s | ETA: 6641s | skipped: 0 | errors: 0
+15:39:54 |   50000/94477 processed | 8/s | ETA: 5871s | skipped: 0 | errors: 0
+15:51:08 |   55000/94477 processed | 8/s | ETA: 5221s | skipped: 0 | errors: 0
+16:10:50 |   60000/94477 processed | 7/s | ETA: 4859s | skipped: 0 | errors: 0
+16:34:01 |   65000/94477 processed | 7/s | ETA: 4465s | skipped: 0 | errors: 0
+16:59:15 |   70000/94477 processed | 6/s | ETA: 3973s | skipped: 0 | errors: 0
+17:28:38 |   75000/94477 processed | 6/s | ETA: 3408s | skipped: 0 | errors: 0
+18:00:38 |   80000/94477 processed | 5/s | ETA: 2722s | skipped: 0 | errors: 0
+18:32:41 |   85000/94477 processed | 5/s | ETA: 1892s | skipped: 0 | errors: 0
+19:04:14 |   90000/94477 processed | 5/s | ETA: 938s | skipped: 0 | errors: 0
+20:01:20 | 
+20:01:20 | Processing complete in 22286.3s
+20:01:21 | Final shape: X=(94477, 64, 390), y=(94477,)
+20:01:21 | Skipped: 0, Errors: 0
+20:01:21 | 
+20:01:21 | Splitting data...
+20:08:07 | Train: 65220 | Val: 11510 | Test: 17747
+20:08:07 | Test participants: {np.int64(53618), np.int64(37779), np.int64(2044), np.int64(4718)}
+20:08:07 | 
+20:08:07 | Saving to data\processed...
+20:10:44 | Saved: X_train.npy, y_train.npy, X_val.npy, y_val.npy, X_test.npy, y_test.npy, config.json
+20:10:44 | 
+20:10:44 | DONE! Next step: python src/train_lstm.py
